@@ -1,0 +1,17 @@
+article h3 {
+ font-size: 35px;
+ background-color: #686868;
+ color: white;
+ 
+}
+ .answer-wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   
+   button {
+    border-radius: 8px;
+    width: 183px;
+    height: 249px;
+   }
+ }

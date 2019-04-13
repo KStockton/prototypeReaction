@@ -1,10 +1,10 @@
 import React from 'react';
-import './Header.css';
+import './Header.scss';
 
 const Header = () => {
   return (
     <header className='Header'>   
-      <h1>Work Hard</h1>
+      <h1>React Grind</h1>
     </header>
   )
 }

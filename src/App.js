@@ -10,8 +10,6 @@ export default class App extends Component {
     super()
     this.state = {
       prototypes: [],
-      // arrayQuestions: null,
-      // stringQuestions: null,
       topicChoice: null
     }
   }
@@ -31,10 +29,13 @@ export default class App extends Component {
     this.setState({topicChoice: quizTopic})
       }
 
-
+      // selectQuestion (card) {
+      //   console.log(card)
+      // }
       
       render() {
-
+      //  let result = this.topicChoice ?  true : []
+      //     const results = this.selectQuestion(result)
         return (
           <div className="App">
         <Header />
