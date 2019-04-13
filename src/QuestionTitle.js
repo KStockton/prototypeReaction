@@ -2,14 +2,16 @@ import React from 'react'
 import './QuestionTitle.scss'
 
 const QuestionTile = (props) =>{
-  console.log(props)
+      const { id, category, questions, answers, resource, correctAnswer} = props
+
  return(
   <article >
-    <h3>Question</h3>
+    <h3>{questions}</h3>
     <section className="answer-wrapper">
-      <button>Answer 1</button>
-      <button>Answer 2</button>
-      <button>Answer 3</button>
+      { answers.map(answer =>{
+        return <button value={answer}>{answer}</button>
+      })
+      }
     </section>
   </article>
  )
