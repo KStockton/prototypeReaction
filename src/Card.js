@@ -12,8 +12,7 @@ export default class Card extends Component {
  }
 
 
- render(){
-    // const { id, category, questions, answers, resource, correctAnswer} = this.props.
+ render() {
     let displayInfo
    if(this.props.topicChoice) {
     displayInfo = this.props.topicChoice.map(choice => {
