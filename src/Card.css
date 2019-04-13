@@ -1,0 +1,11 @@
+.Card-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.title-wrapper {
+  background-color: #ffffff;
+  width: 630px;
+  height: 384px;
+  border-radius: 8px;
+}

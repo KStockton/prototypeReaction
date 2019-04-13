@@ -1,0 +1,18 @@
+.Title-btn-wrapper {
+ display: flex;
+ justify-content: space-evenly;
+
+ button {
+   width: 120px;
+   height: 55px;
+   margin-bottom: 57px;
+   border-radius: 8px;
+   border-color: ghostwhite;
+   background-color: rgba(16, 23, 16, 0.509);
+   color: white;
+   font-size: 20px;
+   &:hover {
+    background-color: rgba(142, 235, 203, 0.55);
+   }
+ }
+}
