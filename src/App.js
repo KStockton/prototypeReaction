@@ -10,7 +10,8 @@ export default class App extends Component {
     this.state = {
       prototypes: [],
       topicChoice: null,
-      studyCards: []
+      studyCards: [],
+      review: false,
     }
   }
 
@@ -36,17 +37,27 @@ export default class App extends Component {
     this.setState({topicChoice: quizTopic})
       }
 
+      selectReview = () => {
+        this.setState({ review: true})
+      }
+
       
       render() {
-        console.log(this.state.prototypes)
-        console.log('localStorageCards', this.state.studyCards)
+        console.log('data', this.state.prototypes)
+        console.log('studyCards', this.state.studyCards)
+        let studyMode
+        if(this.state.review  === true){
+          studyMode = <Card topicChoice={this.state.studyCards}/>
+        } else {
+          studyMode = <Card topicChoice={this.state.topicChoice}/>
+        }
         return (
           <div className="App">
         <header className='App-header'>   
           <h1>React Grind</h1>
         </header>
-        <Title selectTopic={this.selectTopic} />
-        <Card topicChoice={this.state.topicChoice}/>
+        <Title selectTopic={this.selectTopic} selectReview={this.selectReview}/>
+        {studyMode}
       </div>
     )
   }
