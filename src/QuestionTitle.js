@@ -12,7 +12,7 @@ export default class QuestionTitle extends Component{
 
 
 checkSelection = (event) => {
-  this.setState({index: + 1})
+  this.setState({index: this.state.index + 1 })
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     console.log('cheers')
   } else {
@@ -20,12 +20,11 @@ checkSelection = (event) => {
   }
 }
 
-compon
 
 
   render() {
     
-
+console.log(this.state)
       const { index } = this.state
       let { questions, answers, resource} = this.props.topicChoice[index]
       

@@ -14,7 +14,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.jsonbin.io/b/5ca76bf0a40eb3474aecf917/2')
+    fetch('https://api.jsonbin.io/b/5ca76bf0a40eb3474aecf917/3')
       .then(response => response.json())
       .then(prototypes => this.setState({ 
         prototypes: prototypes }))
