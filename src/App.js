@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Header from './Header'
 import './App.scss'
 import Card from './Card'
 import Title from './Title'
@@ -29,18 +28,14 @@ export default class App extends Component {
     this.setState({topicChoice: quizTopic})
       }
 
-      // selectQuestion (card) {
-      //   return card
-      // }
       
       render() {
         console.log(this.state.prototypes)
-        // let result = this.state.topicChoice ?  this.state.topicChoice : []
-        
-        //   const results = this.selectQuestion(result)
         return (
           <div className="App">
-        <Header />
+        <header className='App-header'>   
+          <h1>React Grind</h1>
+        </header>
         <Title selectTopic={this.selectTopic}/>
         <Card topicChoice={this.state.topicChoice}/>
       </div>

@@ -6,28 +6,21 @@ export default class Card extends Component {
  constructor(props) {
   super(props)
 
-  this.state = {
-   title: ''
-  }
  }
-
 
  render() {
     let displayInfo
    if(this.props.topicChoice) {
-    displayInfo = this.props.topicChoice.map(choice => {
-       return (
-         <QuestionTitle questions={choice.questions}
-         key={choice.id}
-         answers={choice.answers}
-         correctAnswer={choice.correctAnswer}
-         resource={choice.resource}
-         category={choice.category}
+    displayInfo = <QuestionTitle topicChoice={this.props.topicChoice}
          />
-         )
-        })
       } else {
-        displayInfo = <h4>Loading...</h4> 
+        displayInfo = <article>
+                      <h2>Would you like to play a game?</h2>
+                      <h3>Instructions</h3>
+                      <h5>You have 30 seconds to test your knowledge on string and array prototypes</h5>
+                      <p>Select a Prototype to Begin</p>
+                      <button></button>
+        </article> 
       }
   return (
    <div className="Card-wrapper">

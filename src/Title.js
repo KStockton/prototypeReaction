@@ -14,7 +14,7 @@ export default class Title extends Component {
   render() {
    return (
     <section className="Title-btn-wrapper bounce">
-         <button className="pure-button" value="Array Prototypes" name="arrayEvent" onClick={this.handleClick}>Array Prototypes</button>
+         <button value="Array Prototypes" name="arrayEvent" onClick={this.handleClick}>Array Prototypes</button>
          <button value="String Prototypes" name="stringEvent" onClick={this.handleClick}>String Prototypes</button>
     </section> 
    )
