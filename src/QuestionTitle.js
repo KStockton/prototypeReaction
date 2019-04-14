@@ -11,16 +11,20 @@ export default class QuestionTitle extends Component{
   }
 
 
-checkAnswer = (event) => {
+checkSelection = (event) => {
+  this.setState({index: + 1})
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     console.log('cheers')
   } else {
-    localStorage.setItem()
+    localStorage.setItem(this.props.topicChoice[this.state.index].id, JSON.stringify(this.props.topicChoice[this.state.index]))
   }
 }
 
+compon
+
 
   render() {
+    
 
       const { index } = this.state
       let { questions, answers, resource} = this.props.topicChoice[index]
@@ -31,7 +35,7 @@ checkAnswer = (event) => {
     <h5>Select Your Answer</h5>
     <section className="answer-wrapper">
       { answers.map((answer, index) =>{
-        return <button key={index} value={answer} onClick={this.checkAnswer}>{answer}</button>
+        return <button key={index} value={answer} onClick={this.checkSelection}>{answer}</button>
       })
       }
     </section>
