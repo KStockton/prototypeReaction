@@ -16,7 +16,8 @@ checkSelection = (event) => {
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     console.log('cheers')
   } else {
-    localStorage.setItem(this.props.topicChoice[this.state.index].id, JSON.stringify(this.props.topicChoice[this.state.index]))
+    console.log('incorrect')
+    localStorage.setItem(this.state.index, JSON.stringify(this.props.topicChoice[this.state.index]))
   }
 }
 
@@ -24,7 +25,7 @@ checkSelection = (event) => {
 
   render() {
     
-console.log(this.state)
+  console.log(this.state)
       const { index } = this.state
       let { questions, answers, resource} = this.props.topicChoice[index]
       
