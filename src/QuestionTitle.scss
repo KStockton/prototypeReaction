@@ -12,18 +12,27 @@ article h2 {
    display: flex;
    flex-direction: row;
    justify-content: space-around;
-   a {
-    display: inline-block;
+   button {
+    display: flow-root;
     border-radius: 8px;
-    width: 198px;
+    width: 255px;
+    height: 55px;
     box-shadow: 7px 8px 7px 1px #928686d4, inset -2px -3px 7px 1px #fbfbfb4f;
     background-color: rgb(35, 0, 22);
     color: white;
+
+    &:hover {
+      background-color: rgba(90, 143, 144, 0.75);
+    }
   }
 }
 
-answerText {
+.answerText {
  font-size: 1.3rem;
+}
+
+.hideAnswer {
+  font-size: 0px;
 }
 
  .resource {

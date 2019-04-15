@@ -10,14 +10,13 @@ export default class Card extends Component {
     displayInfo = <QuestionTitle topicChoice={this.props.topicChoice}
          />
       } else {
-        displayInfo = <article>
+          displayInfo = <article>
                         <h2>Would you like to play a game?</h2>
                         <h3>Instructions</h3>
                         <h5>You have 30 seconds to test your knowledge on string and array prototypes</h5>
-                        <p>Select a Prototype to Begin</p>
-                      <button>Start</button>
-        </article> 
-      }
+                        <p>Select a Prototype to Above to Begin</p>
+                      </article> 
+        } 
   return (
    <div className="Card-wrapper">
    <section className="title-wrapper">

@@ -16,7 +16,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.myjson.com/bins/1fhx10')
+    fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/michaelks-datset/learnprototypes')
       .then(response => response.json())
       .then(prototypes => this.setState({ 
         prototypes: prototypes }))
@@ -25,13 +25,19 @@ export default class App extends Component {
 
   
   componentWillUpdate(){
-    for(let i = 0; i < localStorage.length; i++){
+    if(this.state.studyCards.length === localStorage.length) {
+      return true;
+    } else {
+    for(let i = 0; i < localStorage.length; i++) {
+      console.log('localStorage', localStorage)
      this.state.studyCards.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
     }
   }
+  }
+  
     
     selectTopic = (topic) => {
-      let quizTopic = this.state.prototypes.filter(prototype => {   
+      let quizTopic = this.state.prototypes.learnPrototypes.filter(prototype => {   
         return prototype.category === topic
       })
     this.setState({topicChoice: quizTopic})
@@ -43,7 +49,7 @@ export default class App extends Component {
 
       
       render() {
-        console.log('data', this.state.prototypes)
+       console.log('this.state.prototypes', this.state.prototypes)
         console.log('studyCards', this.state.studyCards)
         let studyMode
         if(this.state.review  === true){
@@ -51,11 +57,10 @@ export default class App extends Component {
         } else {
           studyMode = <Card topicChoice={this.state.topicChoice}/>
         }
-        // let studyMode = (this.state.review) ? <Card topicChoice={this.state.studyCards}/> : <Card topicChoice={this.state.topicChoice}/>
         return (
           <div className="App">
         <header className='App-header'>   
-          <h1>React Grind</h1>
+          <h1>Want to Play a Game</h1>
         </header>
         <Title selectTopic={this.selectTopic} selectReview={this.selectReview}/>
         {studyMode}
