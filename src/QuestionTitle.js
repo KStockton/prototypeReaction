@@ -31,15 +31,16 @@ checkSelection = (event) => {
       
   return(
     <article >
-      <h3>{questions}</h3>
-      <h5>Select Your Answer</h5>
+      <h2>{questions}</h2>
         <section className="answer-wrapper">
           { answers.map((answer, index) =>{
-           return <button key={index} value={answer} onClick={this.checkSelection}>{answer}</button>
+           return <a role="button" key={index} value={answer} onClick={this.checkSelection}>
+                    <p className="answerText" >{answer}</p>
+                  </a>
             })
           }
         </section>
-      <a href={resource}>Resource</a>
+      <a className="resource" href={resource}>Resource</a>
     </article>
  )
 }
