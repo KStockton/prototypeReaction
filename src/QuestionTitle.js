@@ -17,7 +17,6 @@ checkSelection = (event) => {
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     localStorage.removeItem(this.state.index)
       showResult = 'That was Correct'
-
   } else {
     showResult = 'That was Incorrect'
     localStorage.setItem(this.state.index, JSON.stringify(this.props.topicChoice[this.state.index]))
@@ -25,6 +24,7 @@ checkSelection = (event) => {
   this.setState({ index: this.state.index +1,
   showResult: showResult })
 }
+
 componentDidUpdate = () =>{
   if(this.state.index + 1 === this.props.topicChoice.length){
     this.setState({ index: 0, showResult: ''})
