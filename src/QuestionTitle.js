@@ -15,7 +15,7 @@ checkSelection = (event) => {
   this.setState({index: this.state.index + 1 })
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     console.log('cheers')
-
+    localStorage.removeItem(this.state.index)
   } else {
     console.log('incorrect')
     localStorage.setItem(this.state.index, JSON.stringify(this.props.topicChoice[this.state.index]))
@@ -31,7 +31,7 @@ checkSelection = (event) => {
       
   return(
     <article >
-      <h4>{questions}</h4>
+      <h3>{questions}</h3>
       <h5>Select Your Answer</h5>
         <section className="answer-wrapper">
           { answers.map((answer, index) =>{
