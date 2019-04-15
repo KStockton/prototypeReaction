@@ -3,10 +3,6 @@ import './Card.scss'
 import QuestionTitle from './QuestionTitle'
 
 export default class Card extends Component {
- constructor(props) {
-  super(props)
-
- }
 
  render() {
     let displayInfo
@@ -15,11 +11,11 @@ export default class Card extends Component {
          />
       } else {
         displayInfo = <article>
-                      <h2>Would you like to play a game?</h2>
-                      <h3>Instructions</h3>
-                      <h5>You have 30 seconds to test your knowledge on string and array prototypes</h5>
-                      <p>Select a Prototype to Begin</p>
-                      <button></button>
+                        <h2>Would you like to play a game?</h2>
+                        <h3>Instructions</h3>
+                        <h5>You have 30 seconds to test your knowledge on string and array prototypes</h5>
+                        <p>Select a Prototype to Begin</p>
+                      <button>Start</button>
         </article> 
       }
   return (
