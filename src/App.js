@@ -51,6 +51,7 @@ export default class App extends Component {
         } else {
           studyMode = <Card topicChoice={this.state.topicChoice}/>
         }
+        // let studyMode = (this.state.review) ? <Card topicChoice={this.state.studyCards}/> : <Card topicChoice={this.state.topicChoice}/>
         return (
           <div className="App">
         <header className='App-header'>   
