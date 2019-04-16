@@ -22,7 +22,7 @@ export default class App extends Component {
         prototypes: prototypes }))
       .catch(error => console.log(error))
   }
-
+compon
   
   componentWillUpdate(){
     if(this.state.studyCards.length === localStorage.length) {
@@ -37,19 +37,20 @@ export default class App extends Component {
   
     
     selectTopic = (topic) => {
-      let quizTopic = this.state.prototypes.learnPrototypes.filter(prototype => {   
+      let topicChoice = this.state.prototypes.learnPrototypes.filter(prototype => {   
         return prototype.category === topic
       })
-    this.setState({topicChoice: quizTopic})
+    this.setState({topicChoice: topicChoice})
       }
 
       selectReview = () => {
-        this.setState({ review: true})
+        this.setState({ review: !this.state.review})
       }
 
       
       render() {
-       console.log('this.state.prototypes', this.state.prototypes)
+        console.log(this.state.review)
+      //  console.log('this.state.prototypes', this.state.prototypes)
         console.log('studyCards', this.state.studyCards)
         let studyMode
         if(this.state.review  === true){

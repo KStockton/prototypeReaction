@@ -16,25 +16,27 @@ checkSelection = (event) => {
   let showResult 
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     localStorage.removeItem(this.state.index)
-      showResult = 'That was Correct'
+      showResult = 'Correct'
   } else {
-    showResult = 'That was Incorrect'
+    showResult = 'Incorrect'
     localStorage.setItem(this.state.index, JSON.stringify(this.props.topicChoice[this.state.index]))
   }
   this.setState({ index: this.state.index +1,
-  showResult: showResult })
+  showResult: showResult }, () => setTimeout(() =>{
+    this.setState( { showResult: ''})
+  }, 1000 ))
 }
 
 componentDidUpdate = () =>{
   if(this.state.index + 1 === this.props.topicChoice.length){
-    this.setState({ index: 0, showResult: ''})
+    this.setState({ index: 0 })
   }
 }
  
   render() {
       const { index } = this.state
       let { questions, answers, resource} = this.props.topicChoice[index]
-      
+      console.log('showResult:', this.state.showResult)
   return (
     <article >
       <h2>{questions}</h2>
@@ -46,7 +48,7 @@ componentDidUpdate = () =>{
             })
           }
         </section>
-        <p>{this.state.showResult}</p>
+        <p className="show-result">{this.state.showResult}</p>
       <a href={resource}>Resource</a>
     </article>
  )

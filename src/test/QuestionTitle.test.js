@@ -1,6 +1,10 @@
 // import React from 'react';
 // import QuestionTitle from '../QuestionTitle';
-// import { shallow } from 'enzyme';
+// import { shallow } from "enzyme";
+// import { configure } from 'enzyme';
+// import Adapter from 'enzyme-adapter-react-16';
+
+// configure({ adapter: new Adapter() })
 
 
 // describe('QuestionTitle', () =>{
@@ -11,6 +15,9 @@
 //    )
 //   })
 
-
+//   it('should match the snapshot with all data passed in', () =>{
+//    expect(wrapper).toMatchSnapshot()
+//   })
 
 // })
+

@@ -2,7 +2,7 @@ article h3 {
  font-size: 35px;
  background-color: #686868;
  color: white;
- 
+ margin: 0px 6px;
 }
 
 article h2 {
@@ -19,24 +19,22 @@ article h2 {
     border-radius: 8px;
     width: 255px;
     height: 55px;
-    box-shadow: 7px 8px 7px 1px #928686d4, inset -2px -3px 7px 1px #fbfbfb4f;
-    background-color: rgb(35, 0, 22);
+    /* box-shadow: 2px 2px 0px 0px #d5e6e66b, inset -2px -3px 7px 1px #fbfbfb4f; */
+    background-color: #230016bf;
     color: white;
-
+    cursor: pointer;
     &:hover {
       background-color: rgba(90, 143, 144, 0.75);
     }
   }
 }
 
-.answerText {
- font-size: 1.3rem;
+.show-result {
+  font-size: 36px;
+  text-transform: capitalize;
+  min-height: 40px;
+  margin: 34px 7px;
 }
-
-.hideAnswer {
-  font-size: 0px;
-}
-
  .resource {
    font-size: 30px;
  }
