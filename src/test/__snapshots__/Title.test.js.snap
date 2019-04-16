@@ -2,10 +2,10 @@
 
 exports[`Title should match the snapshot with all the data passed in 1`] = `
 <section
-  className="Title-btn-wrapper bounce"
+  className="Title-btn-wrapper"
 >
   <button
-    className="array"
+    className="array-btn"
     name="arrayEvent"
     onClick={[Function]}
     value="Array Prototypes"

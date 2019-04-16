@@ -22,7 +22,7 @@ export default class App extends Component {
         prototypes: prototypes }))
       .catch(error => console.log(error))
   }
-compon
+
   
   componentWillUpdate(){
     if(this.state.studyCards.length === localStorage.length) {
