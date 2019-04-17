@@ -33,7 +33,6 @@ componentDidUpdate = () =>{
   render() {
       const { index } = this.state
       let { questions, answers, resource} = this.props.topicChoice[index]
-      // console.log('showResult:', this.state.showResult)
   return (
     <article >
       <h2>{questions}</h2>

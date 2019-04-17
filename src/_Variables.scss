@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700"');
 
+@mixin displayFlex($justC, $alignC, $alignI, $fdirection){
+ display: flex;
+ justify-content: $justC;
+ align-content: $alignC;
+ align-items: $alignI;
+ flex-direction: $fdirection;
+}
+
+
 $card-info-color: #000;
 $btn-text-color: #fff;
-$app-orientation-all: flex;
 $border-color: #fff;

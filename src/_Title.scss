@@ -1,9 +1,8 @@
 @import './_Variables.scss'; 
 
 .Title-btn-wrapper {
- display: flex;
- justify-content: space-evenly;
- padding-bottom: 7rem;
+  @include displayFlex(space-evenly, null, null, null);
+  padding-bottom: 7rem;
 
  button {
    width: 120px;
