@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title should match the snapshot with all the data passed in 1`] = `
+<section
+  className="Title-btn-wrapper"
+>
+  <button
+    className="array-btn"
+    name="arrayEvent"
+    onClick={[Function]}
+    value="Array Prototypes"
+  >
+    Array Prototypes
+  </button>
+  <button
+    onClick={[Function]}
+    value="review"
+  >
+     Review Cards 
+  </button>
+  <button
+    name="stringEvent"
+    onClick={[Function]}
+    value="String Prototypes"
+  >
+    String Prototypes
+  </button>
+</section>
+`;

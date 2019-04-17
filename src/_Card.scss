@@ -1,0 +1,42 @@
+@import './_Variables.scss'; 
+
+
+.Card-wrapper{
+  display: $app-orientation-all;
+  justify-content: center;
+}
+
+.title-wrapper {
+  color: $card-info-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffffffcf;
+  width: 932px;
+  height: 427px;
+  border-radius: 11px;
+  box-shadow: inset 1px -3px 9px 7px #010808;
+}
+
+article {
+    h2 {
+      color: $card-info-color;
+    }
+    p {
+    color: $card-info-color;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+}
+@media only screen and (min-width: 730px) {
+  .title-wrapper {
+    width: 75vw;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .title-wrapper {
+    width: 75vw;
+    height: 500px;
+  }
+
+}

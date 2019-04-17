@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.scss'
+import './_App.scss'
 import Card from './Card'
 import Title from './Title'
 
@@ -24,7 +24,7 @@ export default class App extends Component {
   }
 
   
-  componentWillUpdate(){
+  componentWillUpdate(){  
     if(this.state.studyCards.length === localStorage.length) {
       return true;
     } else {
@@ -37,20 +37,18 @@ export default class App extends Component {
   
     
     selectTopic = (topic) => {
-      let quizTopic = this.state.prototypes.learnPrototypes.filter(prototype => {   
+      let topicChoice = this.state.prototypes.learnPrototypes.filter(prototype => {   
         return prototype.category === topic
       })
-    this.setState({topicChoice: quizTopic})
+    this.setState({topicChoice: topicChoice})
       }
 
       selectReview = () => {
-        this.setState({ review: true})
+        this.setState({ review: !this.state.review})
       }
 
       
       render() {
-       console.log('this.state.prototypes', this.state.prototypes)
-        console.log('studyCards', this.state.studyCards)
         let studyMode
         if(this.state.review  === true){
           studyMode = <Card topicChoice={this.state.studyCards}/>
@@ -60,7 +58,7 @@ export default class App extends Component {
         return (
           <div className="App">
         <header className='App-header'>   
-          <h1>Want to Play a Game</h1>
+          <h1>Prototype Building Blocks</h1>
         </header>
         <Title selectTopic={this.selectTopic} selectReview={this.selectReview}/>
         {studyMode}

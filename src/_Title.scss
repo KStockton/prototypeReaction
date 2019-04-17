@@ -1,6 +1,9 @@
+@import './_Variables.scss'; 
+
 .Title-btn-wrapper {
  display: flex;
  justify-content: space-evenly;
+ padding-bottom: 7rem;
 
  button {
    width: 120px;
@@ -9,8 +12,9 @@
    border-radius: 8px;
    border-color: ghostwhite;
    background-color: rgba(16, 23, 16, 0.509);
-   color: white;
+   color: $btn-text-color;
    font-size: 20px;
+   cursor: pointer;
    &:hover {
      background-color: rgba(142, 235, 203, 0.55);
     }

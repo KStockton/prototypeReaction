@@ -1,0 +1,65 @@
+@import './_Variables.scss'; 
+
+article h3 {
+ color: $btn-text-color;
+ margin: 0px 6px;
+}
+
+article h2 {
+  margin: 52px 0px;
+  min-height: 7rem;
+}
+ .answer-wrapper {
+   display: $app-orientation-all;
+   flex-direction: row;
+   justify-content: space-around;
+   button {
+    display: flow-root;
+    border-radius: 8px;
+    width: 257px;
+    height: 69px;
+    background-color: $card-info-color;
+    color: $btn-text-color;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(90, 143, 144, 0.75);
+    }
+  }
+}
+
+.show-result {
+  font-size: 36px;
+  text-transform: capitalize;
+  min-height: 40px;
+  margin: 34px 7px;
+}
+ .resource {
+   font-size: 30px;
+ }
+
+ @media only screen and (max-width: 832px) {
+  
+  article h2 {
+    margin: 5px 0px 22px 1px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .answer-wrapper{
+    display: $app-orientation-all;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  button {
+    width: 90vw;
+  }
+
+  .show-result {
+    font-size: 20px;
+    margin: 3px 0px;
+    color: yellow;
+  }
+}

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionTitle should match the snapshot with all data passed in 1`] = `
+<article>
+  <h2>
+    What does .unshift do to an array ?
+  </h2>
+  <section
+    className="answer-wrapper"
+  >
+    <button
+      key="0"
+      onClick={[Function]}
+      value="adds items to the beginning"
+    >
+      adds items to the beginning
+    </button>
+    <button
+      key="1"
+      onClick={[Function]}
+      value="removes items from beginning"
+    >
+      removes items from beginning
+    </button>
+    <button
+      key="2"
+      onClick={[Function]}
+      value="adds items to the end"
+    >
+      adds items to the end
+    </button>
+  </section>
+  <p
+    className="show-result"
+  />
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift"
+  >
+    Resource
+  </a>
+</article>
+`;

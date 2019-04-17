@@ -1,18 +1,20 @@
 {
-  "name": "react-static-comp",
+  "name": "climb-on",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "node-sass": "^4.11.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "^2.1.8"
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,7 +27,18 @@
   ],
   "devDependencies": {
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/setupTest.js",
+      "!src/serviceWorker.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

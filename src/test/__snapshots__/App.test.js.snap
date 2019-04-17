@@ -1,3 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should match the snapshot with all data passed in 1`] = `undefined`;
+exports[`App should match the snapshot with all data passed in 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+      Want to Play a Game
+    </h1>
+  </header>
+  <Title
+    selectReview={[Function]}
+    selectTopic={[Function]}
+  />
+  <Card
+    topicChoice={null}
+  />
+</div>
+`;
