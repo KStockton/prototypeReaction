@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './_App.scss'
-import Card from './Card'
-import Title from './Title'
-
+import Card from './Card';
+import Title from './Title';
 
 export default class App extends Component {
   constructor(){
@@ -13,7 +12,7 @@ export default class App extends Component {
       studyCards: [],
       review: false,
     }
-  }
+  };
 
   componentDidMount() {
     fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/michaelks-datset/learnprototypes')
@@ -21,19 +20,12 @@ export default class App extends Component {
       .then(prototypes => this.setState({ 
         prototypes: prototypes }))
       .catch(error => console.log(error))
-  }
-
-  
+  };
   componentWillUpdate(){  
-    if(this.state.studyCards.length === localStorage.length) {
-      return true;
-    } else {
     for(let i = 0; i < localStorage.length; i++) {
-      console.log('localStorage', localStorage)
      this.state.studyCards.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
     }
-  }
-  }
+  };
   
     
     selectTopic = (topic) => {
@@ -41,12 +33,11 @@ export default class App extends Component {
         return prototype.category === topic
       })
     this.setState({topicChoice: topicChoice})
-      }
+      };
 
       selectReview = () => {
         this.setState({ review: !this.state.review})
-      }
-
+      };
       
       render() {
         let studyMode
@@ -54,15 +45,15 @@ export default class App extends Component {
           studyMode = <Card topicChoice={this.state.studyCards}/>
         } else {
           studyMode = <Card topicChoice={this.state.topicChoice}/>
-        }
+        };
         return (
           <div className="App">
-        <header className='App-header'>   
-          <h1>Prototype Building Blocks</h1>
-        </header>
-        <Title selectTopic={this.selectTopic} selectReview={this.selectReview}/>
-        {studyMode}
-      </div>
+            <header className='App-header'>   
+            <h1>Prototype Building Blocks</h1>
+            </header>
+          <Title selectTopic={this.selectTopic} selectReview={this.selectReview}/>
+            {studyMode}
+          </div>
     )
   }
-}
+};

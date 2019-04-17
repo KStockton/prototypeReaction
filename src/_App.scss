@@ -17,9 +17,7 @@
 }
 
 .App-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex(center, center, null, null);
   color: $border-color;
   padding: 20px;
   margin: auto;

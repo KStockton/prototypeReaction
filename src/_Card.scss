@@ -2,8 +2,7 @@
 
 
 .Card-wrapper{
-  display: $app-orientation-all;
-  justify-content: center;
+  @include displayFlex(center, null, null, null)
 }
 
 .title-wrapper {
