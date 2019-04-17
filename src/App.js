@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.scss'
+import './_App.scss'
 import Card from './Card'
 import Title from './Title'
 
@@ -24,7 +24,7 @@ export default class App extends Component {
   }
 
   
-  componentWillUpdate(){
+  componentWillUpdate(){  
     if(this.state.studyCards.length === localStorage.length) {
       return true;
     } else {
@@ -49,9 +49,6 @@ export default class App extends Component {
 
       
       render() {
-        console.log(this.state.review)
-      //  console.log('this.state.prototypes', this.state.prototypes)
-        console.log('studyCards', this.state.studyCards)
         let studyMode
         if(this.state.review  === true){
           studyMode = <Card topicChoice={this.state.studyCards}/>

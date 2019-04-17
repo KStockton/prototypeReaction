@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Title.scss'
+import './_Title.scss'
 
 export default class Title extends Component {
 

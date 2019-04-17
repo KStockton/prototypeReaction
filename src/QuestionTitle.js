@@ -1,6 +1,5 @@
 import React, { Component } from 'react' 
-import './QuestionTitle.scss'
-
+import './_QuestionTitle.scss'
 export default class QuestionTitle extends Component{
   constructor(props){
     super(props)
@@ -21,12 +20,8 @@ checkSelection = (event) => {
     showResult = 'Incorrect'
     localStorage.setItem(this.state.index, JSON.stringify(this.props.topicChoice[this.state.index]))
   }
-  this.setState({ 
-  index: this.state.index +1,
-  showResult: showResult }, 
-  () => setTimeout(() =>{
-    this.setState( { showResult: ''})
-  }, 1000 ))
+  this.setState({ index: this.state.index +1, showResult: showResult }, () => setTimeout(() =>{
+    this.setState( { showResult: ''})}, 1000 ))
 }
 
 componentDidUpdate = () =>{

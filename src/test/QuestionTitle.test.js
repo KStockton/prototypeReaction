@@ -36,7 +36,7 @@ const mockTopicChoice = [
   }
 ]
 
-
+jest.useFakeTimers()
 
 describe('QuestionTitle', () =>{
   let wrapper;
@@ -62,9 +62,16 @@ describe('QuestionTitle', () =>{
    expect(wrapper.state().showResult).toEqual("Incorrect")
    setTimeout(() => {expect(wrapper.state().showResult).toEqual('')}, 1000)
   })
-
-
+  it('It should update the state index by 1', () =>{
+   wrapper.find('.answer-wrapper').childAt(1).simulate('click', { target: { value: "adds items to the beginning"}})
+   expect(wrapper.state().showResult).toEqual("Correct")
+   expect(wrapper.state().index + 1).toEqual(1)
+  })
+  it('should have a timer of 1 second when setTimeout is called', () => {
+   wrapper.find('.answer-wrapper').childAt(1).simulate('click', { target: { value: "adds items to the beginning"}})
+   expect(setTimeout).toHaveBeenCalled()
+  })
   
-
-})
-
+  
+ })
+ 

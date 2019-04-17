@@ -1,5 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Card renders correctly when props are passed in Card renders differently when props are passed in 1`] = `
+<div
+  className="Card-wrapper"
+>
+  <section
+    className="title-wrapper"
+  >
+    <QuestionTitle
+      topicChoice={
+        Array [
+          Object {
+            "answers": Array [
+              "adds items to the beginning",
+              "removes items from beginning",
+              "adds items to the end",
+            ],
+            "category": "Array Prototypes",
+            "correct": false,
+            "correctAnswer": "adds items to the beginning",
+            "id": "2932-tq-iwpjt-0oodks",
+            "questions": "What does .unshift do to an array ?",
+            "resource": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift",
+          },
+          Object {
+            "answers": Array [
+              ".findIndex",
+              ".lastIndexOf",
+              ".includes",
+            ],
+            "category": "Array Prototypes",
+            "correct": false,
+            "correctAnswer": ".includes",
+            "id": "2932-f5-o4cm9-lcfdks",
+            "questions": "What array prototype checks if an array has a certain value and returns true or false ?",
+            "resource": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+          },
+        ]
+      }
+    />
+  </section>
+</div>
+`;
+
 exports[`Card should match the snapshot with all data passed in 1`] = `
 <div
   className="Card-wrapper"
@@ -11,9 +54,9 @@ exports[`Card should match the snapshot with all data passed in 1`] = `
       <h2>
         Would you like to play a game?
       </h2>
-      <h5>
-        You have 30 seconds to test your knowledge on string and array prototypes
-      </h5>
+      <p>
+        Test your knowledge on string and array prototypes.
+      </p>
       <p>
         Select a Prototype to Above to Begin
       </p>

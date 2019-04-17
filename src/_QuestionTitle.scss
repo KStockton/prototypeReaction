@@ -1,7 +1,7 @@
+@import './_Variables.scss'; 
+
 article h3 {
- font-size: 35px;
- background-color: #686868;
- color: white;
+ color: $btn-text-color;
  margin: 0px 6px;
 }
 
@@ -17,11 +17,10 @@ article h2 {
    button {
     display: flow-root;
     border-radius: 8px;
-    width: 255px;
-    height: 55px;
-    /* box-shadow: 2px 2px 0px 0px #d5e6e66b, inset -2px -3px 7px 1px #fbfbfb4f; */
-    background-color: #230016bf;
-    color: white;
+    width: 241px;
+    height: 69px;
+    background-color: $card-info-color;
+    color: $btn-text-color;
     cursor: pointer;
     &:hover {
       background-color: rgba(90, 143, 144, 0.75);
