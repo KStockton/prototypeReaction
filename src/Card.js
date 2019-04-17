@@ -12,9 +12,9 @@ export default class Card extends Component {
          />
       } else {
           displayInfo = <article>
-                           <h2>Would you like to play a game?</h2>
+                           <h2>Knowledge Is Power. Let's Begin!</h2>
                            <p>Test your knowledge on string and array prototypes.</p>
-                           <p>Select a Prototype to Above to Begin</p>
+                           <p>Select Option Above to Begin</p>
                         </article> 
         } 
   return (

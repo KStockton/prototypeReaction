@@ -8,16 +8,15 @@ article h3 {
 article h2 {
   margin: 52px 0px;
   min-height: 7rem;
-  min-width: 49rem;
 }
  .answer-wrapper {
-   display: flex;
+   display: $app-orientation-all;
    flex-direction: row;
    justify-content: space-around;
    button {
     display: flow-root;
     border-radius: 8px;
-    width: 241px;
+    width: 257px;
     height: 69px;
     background-color: $card-info-color;
     color: $btn-text-color;
@@ -37,3 +36,30 @@ article h2 {
  .resource {
    font-size: 30px;
  }
+
+ @media only screen and (max-width: 832px) {
+  
+  article h2 {
+    margin: 5px 0px 22px 1px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .answer-wrapper{
+    display: $app-orientation-all;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  button {
+    width: 90vw;
+  }
+
+  .show-result {
+    font-size: 20px;
+    margin: 3px 0px;
+    color: yellow;
+  }
+}

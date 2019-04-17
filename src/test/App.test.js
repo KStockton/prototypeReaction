@@ -88,8 +88,8 @@ describe('App', () => {
         resource: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"
         }
       wrapper.state().prototypes.learnPrototypes = mockData;
-      let result = wrapper.instance().selectTopic();
-      expect(result).toHaveBeenCalled()
+      let result = wrapper.instance().selectTopic(mockTopic);
+      expect(result).toHaveBeenCalled(mockResult)
     })
 
 })

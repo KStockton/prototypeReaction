@@ -58,7 +58,7 @@ export default class App extends Component {
         return (
           <div className="App">
         <header className='App-header'>   
-          <h1>Want to Play a Game</h1>
+          <h1>Prototype Building Blocks</h1>
         </header>
         <Title selectTopic={this.selectTopic} selectReview={this.selectReview}/>
         {studyMode}
