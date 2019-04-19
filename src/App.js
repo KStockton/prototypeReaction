@@ -18,10 +18,12 @@ export default class App extends Component {
     fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/michaelks-datset/learnprototypes')
       .then(response => response.json())
       .then(prototypes => this.setState({ 
-        prototypes: prototypes }))
+        prototypes: prototypes.learnPrototypes }))
       .catch(error => console.log(error))
   };
-  componentWillUpdate(){  
+  
+  componentWillUpdate(){ 
+    
     for(let i = 0; i < localStorage.length; i++) {
      this.state.studyCards.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
     }
@@ -29,17 +31,18 @@ export default class App extends Component {
   
     
     selectTopic = (topic) => {
-      let topicChoice = this.state.prototypes.learnPrototypes.filter(prototype => {   
+      let topicChoice = this.state.prototypes.filter(prototype => {   
         return prototype.category === topic
       })
-    this.setState({topicChoice: topicChoice})
-      };
+      this.setState({topicChoice: topicChoice})
+    };
 
       selectReview = () => {
         this.setState({ review: !this.state.review})
       };
       
       render() {
+        console.log(this.state.studyCards)
         let studyMode
         if(this.state.review  === true){
           studyMode = <Card topicChoice={this.state.studyCards}/>

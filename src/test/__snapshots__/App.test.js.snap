@@ -8,7 +8,7 @@ exports[`App should match the snapshot with all data passed in 1`] = `
     className="App-header"
   >
     <h1>
-      Want to Play a Game
+      Prototype Building Blocks
     </h1>
   </header>
   <Title

@@ -73,8 +73,8 @@ describe('App', () => {
       })
 
     });
-    it('App\'s selectTopic should filter data', () => {
-      const mockResult = {
+    it('App\'s selectTopic method should filter data', () => {
+      const mockResult = [{
         id: "2932-f5-o4cm9-lcfdks",
         category: "Array Prototypes",
         questions: "What array prototype checks if an array has a certain value and returns true or false ?",
@@ -86,11 +86,17 @@ describe('App', () => {
         correctAnswer: ".includes",
         correct: false,
         resource: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"
-        }
-      wrapper.state().prototypes.learnPrototypes = mockData;
-      let result = wrapper.instance().selectTopic(mockTopic);
-      expect(result).toHaveBeenCalled(mockResult)
+        }]
+      wrapper.state().prototypes = mockData;
+      wrapper.instance().selectTopic(mockTopic);
+      expect(wrapper.state().topicChoice).toEqual(mockResult)
     })
+    // it('Should update state when invoked with array of objects', () => {
+    //   wrapper.setState({ topicChoice : mockData})
+    //   wrapper.instance().selectTopic(mockTopic)
+    //   expect(wrapper.state().topicChoic).toEqual([mockResult])
+
+    // })
 
 })
 })

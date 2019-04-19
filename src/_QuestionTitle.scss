@@ -36,15 +36,15 @@ article h2 {
    font-size: 30px;
  }
 
- @media only screen and (max-width: 832px) {
+ @media only screen and (max-width: 1100px) {
   
   article h2 {
-    @include displayFlex(center, center, null, null);
+    @include displayFlex(center, center, center, null);
     margin: 5px 0px 22px 1px;
     font-size: 20px;
   }
   .answer-wrapper{
-    @include displayFlex(space-evenly, center, null, column);
+    @include displayFlex(space-evenly, center, center, column);
   }
   
   button {
@@ -55,6 +55,6 @@ article h2 {
   .show-result {
     font-size: 20px;
     margin: 3px 0px;
-    color: yellow;
+    color: #ffff00;
   }
 }
