@@ -1,4 +1,4 @@
-# Welcom to Prototype Building Blocks
+# Welcome to Prototype Building Blocks
 
 ## The Goals and Objectives of this project is as below:
 
