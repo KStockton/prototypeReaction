@@ -31,7 +31,10 @@ This project was built with the following
 - Jest
 - Enzyme
 
-## Screenshot
+## Screenshots
 <img width="657" alt="Screen Shot 2019-04-17 at 8 30 16 AM" src="https://user-images.githubusercontent.com/34406483/56297970-95031180-60ee-11e9-9593-e002f7cf5d15.png">
+
+
+## Mobile
 <img width="458" alt="Screen Shot 2019-04-17 at 8 30 01 AM" src="https://user-images.githubusercontent.com/34406483/56297976-97fe0200-60ee-11e9-9385-6daeea725976.png">
 
