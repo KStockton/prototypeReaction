@@ -31,8 +31,10 @@ describe('Title', () =>{
     it('should call selectTopic when review button is clicked', () => {
       wrapper.find('.Title-btn-wrapper').childAt(2).simulate('click', { target: { value: 'String Prototypes'} });
       expect(mock_selectReview).toBeCalled()
+    });
+    it('should render three buttons for the first question', () =>{
+      const btnCount = wrapper.find('button')
+      expect(btnCount.length).toEqual(3)
     })
-
-
 
 });

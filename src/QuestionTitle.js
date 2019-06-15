@@ -1,4 +1,3 @@
-import { CSSTransitionGroup } from 'react-transition-group'
 import React, { Component } from 'react' 
 import './_QuestionTitle.scss'
 export default class QuestionTitle extends Component{
@@ -13,7 +12,6 @@ export default class QuestionTitle extends Component{
 
 
 checkSelection = (event) => {
-  console.log('this.state.index', this.state.index)
   let showResult 
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     localStorage.removeItem(this.props.topicChoice[this.state.index].id)
@@ -28,28 +26,22 @@ checkSelection = (event) => {
   }
   
   filterLocalStorage () {
-    console.log('yo')
     let removeDup = []
 
     if(removeDup.length > 0){
-      console.log('34')
       for(let i = 0; i < localStorage.length; i++) {
         removeDup.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
       }
       removeDup.forEach((uniqueId, index) =>{
-        console.log('uniqueid',uniqueId)
         if(uniqueId.id === this.props.topicChoice[this.state.index].id){
           removeDup.splice(index, 1)
         }
       })
       localStorage.clear()
-      console.log('44')
       for(let i = 0; i < removeDup.length; i++){
         localStorage.setItem(removeDup[i].id, JSON.stringify(i))
       }
-      console.log('48')
     }
-console.log(removeDup)
 }
 
 

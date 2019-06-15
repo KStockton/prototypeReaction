@@ -15,11 +15,12 @@ article h2 {
    button {
     display: flow-root;
     border-radius: 8px;
-    width: 257px;
+    width: 318px;
     height: 69px;
     background-color: $card-info-color;
     color: $btn-text-color;
     cursor: pointer;
+    font-size: 18px;
     &:hover {
       background-color: rgba(90, 143, 144, 0.75);
     }
@@ -30,10 +31,11 @@ article h2 {
   font-size: 36px;
   text-transform: capitalize;
   min-height: 40px;
-  margin: 34px 7px;
+  margin: 23px 7px;
 }
- .resource {
-   font-size: 30px;
+ a {
+   font-size: 23px;
+   text-decoration: none;
  }
 
  @media only screen and (max-width: 1100px) {

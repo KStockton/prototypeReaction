@@ -12,6 +12,7 @@ exports[`App should match the snapshot with all data passed in 1`] = `
     </h1>
   </header>
   <Title
+    review={Array []}
     selectReview={[Function]}
     selectTopic={[Function]}
   />

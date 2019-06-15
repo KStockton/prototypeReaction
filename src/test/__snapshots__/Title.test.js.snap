@@ -17,6 +17,7 @@ exports[`Title should match the snapshot with all the data passed in 1`] = `
     value="review"
   >
      Review Cards 
+    0
   </button>
   <button
     name="stringEvent"

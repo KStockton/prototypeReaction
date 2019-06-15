@@ -3,7 +3,7 @@ import Card from '../Card';
 import { shallow } from "enzyme";
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import QuestionTitle from '../QuestionTitle'
+
 
 configure({ adapter: new Adapter() })
 
@@ -55,4 +55,10 @@ describe('Card', () => {
       const wrapper = shallow(<Card topicChoice={mocktopicChoice} />)
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('Should render one QuestionTitle when props are true', () =>{
+      const wrapper = shallow(<Card topicChoice={mocktopicChoice} />)
+      const questionComponent = wrapper.find('QuestionTitle')
+      expect(questionComponent.length).toEqual(1)
+    })
   })

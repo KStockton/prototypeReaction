@@ -61,7 +61,8 @@ describe('App', () => {
         prototypes: [],
         topicChoice: null,
         studyCards: [],
-        review: false
+        review: false,
+        localStorage: 0,
       }
       expect(wrapper.state()).toEqual(previousState)
       wrapper.instance().selectReview(true)
@@ -69,7 +70,8 @@ describe('App', () => {
         prototypes: [],
         topicChoice: null,
         studyCards: [],
-        review: true
+        review: true,
+        localStorage: 0,
       })
 
     });
@@ -91,12 +93,12 @@ describe('App', () => {
       wrapper.instance().selectTopic(mockTopic);
       expect(wrapper.state().topicChoice).toEqual(mockResult)
     })
-    // it('Should update state when invoked with array of objects', () => {
-    //   wrapper.setState({ topicChoice : mockData})
-    //   wrapper.instance().selectTopic(mockTopic)
-    //   expect(wrapper.state().topicChoic).toEqual([mockResult])
+    xit('Should update state when invoked with array of objects', () => {
+      wrapper.setState({ topicChoice : mockData})
+      wrapper.instance().selectTopic(mockTopic)
+      expect(wrapper.state().topicChoic).toEqual([mockResult])
 
-    // })
+    })
 
 })
 })

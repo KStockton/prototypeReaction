@@ -11,6 +11,7 @@ export default class App extends Component {
       topicChoice: null,
       studyCards: [],
       review: false,
+      localStorage: 0,
     }
   };
 
@@ -42,11 +43,12 @@ export default class App extends Component {
       };
       
       render() {
-        console.log(this.state.studyCards)
+        console.log("marcus", this.state)
         let studyMode
-        if(this.state.review  === true){
+        if(this.state.review  === true && this.state.studyCards.length > 0){
           studyMode = <Card topicChoice={this.state.studyCards}/>
         } else {
+      
           studyMode = <Card topicChoice={this.state.topicChoice}/>
         };
         return (
@@ -54,7 +56,7 @@ export default class App extends Component {
             <header className='App-header'>   
             <h1>Prototype Building Blocks</h1>
             </header>
-          <Title selectTopic={this.selectTopic} selectReview={this.selectReview}/>
+          <Title selectTopic={this.selectTopic} selectReview={this.selectReview} review={this.state.studyCards}/>
             {studyMode}
           </div>
     )

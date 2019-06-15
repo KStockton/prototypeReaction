@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-color: #ffffffcf;
   width: 932px;
-  height: 427px;
+  height: 35rem;
   border-radius: 11px;
   box-shadow: inset 1px -3px 9px 7px #010808;
 }
@@ -34,8 +34,9 @@ article {
 
 @media only screen and (min-width: 450px) {
   .title-wrapper {
-    width: 75vw;
+    width: 54vw;
     height: 500px;
+    margin-bottom: 67px;
   }
 
 }
