@@ -1,5 +1,4 @@
 import React, { Component } from 'react' 
-import './_QuestionTitle.scss'
 export default class QuestionTitle extends Component{
   constructor(props){
     super(props)
@@ -12,7 +11,8 @@ export default class QuestionTitle extends Component{
 
 
 checkSelection = (event) => {
-  let showResult 
+  let showResult;
+
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
     localStorage.removeItem(this.props.topicChoice[this.state.index].id)
     showResult = 'Correct'
@@ -26,7 +26,7 @@ checkSelection = (event) => {
   }
   
   filterLocalStorage () {
-    let removeDup = []
+    let removeDup = [];
 
     if(removeDup.length > 0){
       for(let i = 0; i < localStorage.length; i++) {
@@ -52,8 +52,9 @@ componentDidUpdate = () =>{
 }
  
   render() {
-      const { index } = this.state
+      const { index, showResult } = this.state
       let { questions, answers, resource} = this.props.topicChoice[index]
+
   return (
     <article >
       <h2>{questions}</h2>
@@ -65,7 +66,7 @@ componentDidUpdate = () =>{
             })
           }
         </section>
-        <p className="show-result">{this.state.showResult}</p>
+        <p className="show-result">{showResult}</p>
       <a href={resource}>Resource</a>
     </article>
  )

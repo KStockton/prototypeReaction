@@ -35,7 +35,7 @@ export default class App extends Component {
       let topicChoice = this.state.prototypes.filter(prototype => {   
         return prototype.category === topic
       })
-      this.setState({topicChoice: topicChoice})
+      this.setState({topicChoice})
     };
 
       selectReview = () => {
@@ -43,20 +43,22 @@ export default class App extends Component {
       };
       
       render() {
+        const { review, studyCards, topicChoice } = this.state;
+        let studyMode;
 
-        let studyMode
-        if(this.state.review  === true && this.state.studyCards.length > 0){
-          studyMode = <Card topicChoice={this.state.studyCards}/>
+        if(review  === true && studyCards.length > 0){
+          studyMode = <Card topicChoice={studyCards}/>
         } else {
       
-          studyMode = <Card topicChoice={this.state.topicChoice}/>
+          studyMode = <Card topicChoice={topicChoice}/>
         };
+
         return (
           <div className="App">
             <header className='App-header'>   
             <h1>Prototype Building Blocks</h1>
             </header>
-          <Title selectTopic={this.selectTopic} selectReview={this.selectReview} review={this.state.studyCards}/>
+          <Title selectTopic={this.selectTopic} selectReview={this.selectReview} review={studyCards}/>
             {studyMode}
           </div>
     )

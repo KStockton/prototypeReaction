@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-// import './_Card.scss'
 import QuestionTitle from '../QuestionTitle/QuestionTitle'
-
-
 export default class Card extends Component {
 
  render() {
-    let displayInfo
-   if(this.props.topicChoice) {
-    displayInfo = <QuestionTitle topicChoice={this.props.topicChoice}
-         />
+    const { topicChoice } = this.props;
+    let displayInfo;
+
+   if(topicChoice) {
+    displayInfo = <QuestionTitle topicChoice={topicChoice}/>
       } else {
           displayInfo = <article>
                            <h2>Introduction</h2>
