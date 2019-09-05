@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './_Title.scss'
+// import './_Title.scss'
 
 export default class Title extends Component {
 
@@ -19,10 +19,18 @@ export default class Title extends Component {
   }
 
   render() {
+
+    let reviewBtn
+    if(this.props.studyCards){
+      reviewBtn = <button value="review" onClick={this.handleClick}>Study First</button>
+    } else {
+      reviewBtn = <button value="review" onClick={this.handleClick}> Review Cards {localStorage.length}</button>
+    
+    }
    return (
     <section className="Title-btn-wrapper">
          <button className="array-btn" value="Array Prototypes" name="arrayEvent" onClick={this.handleClick}>Array Prototypes</button>
-         <button value="review" onClick={this.handleClick}> Review Cards </button>
+         {reviewBtn}
          <button value="String Prototypes" name="stringEvent" onClick={this.handleClick}>String Prototypes</button>
     </section> 
    )

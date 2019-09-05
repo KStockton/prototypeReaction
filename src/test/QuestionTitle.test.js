@@ -49,8 +49,11 @@ describe('QuestionTitle', () =>{
    expect(wrapper).toMatchSnapshot()
   })
   it('QuestionTitle state should have default properties', () =>{
-   expect(wrapper.state().index).toEqual(0)
-   expect(wrapper.state().showResult).toEqual('')
+    const indexState = wrapper.state().index
+    const showResultState = wrapper.state().showResult
+    expect(indexState).toEqual(0)
+    expect(showResultState).toEqual('')
+    
   })
   it('When the selection is correct it should display "correct" ', () => {
    wrapper.find('.answer-wrapper').childAt(0).simulate('click', { target: { value: "adds items to the beginning"}})
@@ -71,7 +74,14 @@ describe('QuestionTitle', () =>{
    wrapper.find('.answer-wrapper').childAt(1).simulate('click', { target: { value: "adds items to the beginning"}})
    expect(setTimeout).toHaveBeenCalled()
   })
-  
+  it('The first button text should have visual text = adds items to the beginning', () => {
+    const btnText = wrapper.find('.answer-wrapper').childAt(0).text()
+    expect(btnText).toEqual("adds items to the beginning")
+  })
+  it('should render three buttons for the first question', () =>{
+    const btnCount = wrapper.find('button')
+    expect(btnCount.length).toEqual(3)
+  })
   
  })
  

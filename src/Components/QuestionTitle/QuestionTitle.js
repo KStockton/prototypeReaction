@@ -1,5 +1,4 @@
 import React, { Component } from 'react' 
-import './_QuestionTitle.scss'
 export default class QuestionTitle extends Component{
   constructor(props){
     super(props)
@@ -12,17 +11,39 @@ export default class QuestionTitle extends Component{
 
 
 checkSelection = (event) => {
-  let showResult 
+  let showResult;
+
   if(event.target.value === this.props.topicChoice[this.state.index].correctAnswer) {
-    localStorage.removeItem(this.state.index)
-      showResult = 'Correct'
+    localStorage.removeItem(this.props.topicChoice[this.state.index].id)
+    showResult = 'Correct'
   } else {
     showResult = 'Incorrect'
-    localStorage.setItem(this.state.index, JSON.stringify(this.props.topicChoice[this.state.index]))
+    localStorage.setItem(this.props.topicChoice[this.state.index].id, JSON.stringify(this.props.topicChoice[this.state.index]))
+    this.filterLocalStorage()
   }
   this.setState({ index: this.state.index +1, showResult: showResult }, () => setTimeout(() =>{
-    this.setState( { showResult: ''})}, 1000 ))
+    this.setState( { showResult: ''})}, 2000 ))
+  }
+  
+  filterLocalStorage () {
+    let removeDup = [];
+
+    if(removeDup.length > 0){
+      for(let i = 0; i < localStorage.length; i++) {
+        removeDup.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
+      }
+      removeDup.forEach((uniqueId, index) =>{
+        if(uniqueId.id === this.props.topicChoice[this.state.index].id){
+          removeDup.splice(index, 1)
+        }
+      })
+      localStorage.clear()
+      for(let i = 0; i < removeDup.length; i++){
+        localStorage.setItem(removeDup[i].id, JSON.stringify(i))
+      }
+    }
 }
+
 
 componentDidUpdate = () =>{
   if(this.state.index + 1 === this.props.topicChoice.length){
@@ -31,8 +52,9 @@ componentDidUpdate = () =>{
 }
  
   render() {
-      const { index } = this.state
+      const { index, showResult } = this.state
       let { questions, answers, resource} = this.props.topicChoice[index]
+
   return (
     <article >
       <h2>{questions}</h2>
@@ -44,7 +66,7 @@ componentDidUpdate = () =>{
             })
           }
         </section>
-        <p className="show-result">{this.state.showResult}</p>
+        <p className="show-result">{showResult}</p>
       <a href={resource}>Resource</a>
     </article>
  )

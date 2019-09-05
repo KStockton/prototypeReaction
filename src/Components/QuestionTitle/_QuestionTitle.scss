@@ -1,4 +1,4 @@
-@import './_Variables.scss'; 
+@import '../../Sass/variables.scss'; 
 
 article h3 {
  color: $btn-text-color;
@@ -15,12 +15,15 @@ article h2 {
    button {
     display: flow-root;
     border-radius: 8px;
-    width: 257px;
+    width: 224px;
     height: 69px;
     background-color: $card-info-color;
     color: $btn-text-color;
-    cursor: pointer;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    
     &:hover {
+      cursor: pointer;
       background-color: rgba(90, 143, 144, 0.75);
     }
   }
@@ -30,21 +33,22 @@ article h2 {
   font-size: 36px;
   text-transform: capitalize;
   min-height: 40px;
-  margin: 34px 7px;
+  margin: 23px 7px;
 }
- .resource {
-   font-size: 30px;
+ a {
+   font-size: 23px;
+   text-decoration: none;
  }
 
- @media only screen and (max-width: 832px) {
+ @media only screen and (max-width: 1100px) {
   
   article h2 {
-    @include displayFlex(center, center, null, null);
+    @include displayFlex(center, center, center, null);
     margin: 5px 0px 22px 1px;
     font-size: 20px;
   }
   .answer-wrapper{
-    @include displayFlex(space-evenly, center, null, column);
+    @include displayFlex(space-evenly, center, center, column);
   }
   
   button {
@@ -55,6 +59,6 @@ article h2 {
   .show-result {
     font-size: 20px;
     margin: 3px 0px;
-    color: yellow;
+    color: #ffff00;
   }
 }
