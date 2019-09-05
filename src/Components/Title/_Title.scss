@@ -1,4 +1,4 @@
-@import './_Variables.scss'; 
+@import '../../Sass/variables.scss'; 
 
 .Title-btn-wrapper {
   @include displayFlex(space-evenly, null, null, null);

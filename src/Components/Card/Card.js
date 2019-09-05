@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import './_Card.scss'
-import QuestionTitle from './QuestionTitle'
+// import './_Card.scss'
+import QuestionTitle from '../QuestionTitle/QuestionTitle'
 
 
 export default class Card extends Component {

@@ -1,7 +1,7 @@
-@import './_Variables.scss'; 
+@import '../../Sass/variables.scss'; 
 
   body {
-    background-image: url('./images/memobg.jpg');
+    background-image: url('../assets/memobg.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin: 0;

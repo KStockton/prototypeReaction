@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './_App.scss'
-import Card from './Card';
-import Title from './Title';
+// import './_App.scss'
+import Card from '../Card/Card';
+import Title from '../Title/Title';
 
 export default class App extends Component {
   constructor(){
@@ -43,7 +43,7 @@ export default class App extends Component {
       };
       
       render() {
-        console.log("marcus", this.state)
+
         let studyMode
         if(this.state.review  === true && this.state.studyCards.length > 0){
           studyMode = <Card topicChoice={this.state.studyCards}/>
