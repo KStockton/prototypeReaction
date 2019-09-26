@@ -1,11 +1,6 @@
 import React from 'react';
-import QuestionTitle from '../QuestionTitle';
+import QuestionTitle from './QuestionTitle';
 import { shallow } from "enzyme";
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-configure({ adapter: new Adapter() })
-
-
 
 const mockTopicChoice = [
   {
