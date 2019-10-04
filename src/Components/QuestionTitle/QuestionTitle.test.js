@@ -55,17 +55,18 @@ describe('QuestionTitle', () =>{
   it('When the selection is correct it should display "correct" ', () => {
     wrapper.find('.answer-wrapper').childAt(0).simulate('click', { target: { value: "adds items to the beginning"}});
     expect(wrapper.state().showResult).toEqual("Correct");
+    
     setTimeout(() => {
-expect(wrapper.state().showResult).toEqual('')
-;}, 1000);
+      expect(wrapper.state().showResult).toEqual('');
+    }, 1000);
   });
 
   it('When the selection is incorrect it should display "incorrect', () =>{
     wrapper.find('.answer-wrapper').childAt(1).simulate('click', { target: { value: "adds items to the end"}});
     expect(wrapper.state().showResult).toEqual("Incorrect");
     setTimeout(() => {
-expect(wrapper.state().showResult).toEqual('')
-;}, 1000);
+      expect(wrapper.state().showResult).toEqual('');
+    }, 1000);
   });
 
   it('It should update the state index by 1', () =>{
